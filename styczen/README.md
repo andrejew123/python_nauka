@@ -1,8 +1,11 @@
 # Winda
 
 Zaprojektujesz windę.
+
 Ludzie czekają w kolejce na różnych piętrach, czekając na windę.
+
 Niektórzy ludzie chcą jechać w góre, niektórzy w dół.
+
 Piętro na które chcą jechać reprezentuje ich numer.
 
 # Zasady
@@ -42,7 +45,9 @@ Piętro na które chcą jechać reprezentuje ich numer.
 4. Piwnice
 
 W pierwszych dwóch wypadkach, taka osoba nie wsiada do windy, pozostaje na swoim piętrze a winda go omija.
+
 W trzecim wypadku, zwracany jest wynik False, ponieważ winda nie ma tutaj racji bytu.
+
 W czwartym przypadku, winda nigdy nie zjeżdża do piwnicy, więc osoba chcąca tam zjechać ląduje na parterze, skąd musi zejść schodami.
 
 ### Output
