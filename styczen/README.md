@@ -50,23 +50,37 @@ Lista wszystkich pięter na których winda się zatrzymała.
 
 ## Przykłady wywołania
 queues = ( (),   (),    (5,5,5), (),   (),    (),    () )
+
 winda = Lift(queues, 5)
+
 winda.theLift()
 
+------------
 queues = ( (),   (),    (1,1),   (),   (),    (),    () )
+
 winda = Lift(queues, 5)
+
 winda.theLift()
 
+------------
 queues = ( (),   (3,),  (4,),    (),   (5,),  (),    () )
+
 winda = Lift(queues, 5)
+
 winda.theLift()
 
+------------
 queues = ( (),   (0,),  (),      (),   (2,),  (3,),  () )
+
 winda = Lift(queues, 5)
+
 winda.theLift()
 
 ## Output wywołań
 [0, 2, 5, 0] 
+
 [0, 2, 1, 0]
+
 [0, 1, 2, 3, 4, 5, 0]
+
 [0, 5, 4, 3, 2, 1, 0]
