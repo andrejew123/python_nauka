@@ -14,8 +14,11 @@ Piętro na które chcą jechać reprezentuje ich numer.
 2. Każde piętro ma dwa guziki - w góre i w dół (oprócz ostatniego i pierwszego piętra)
 3. Winda nigdy nie zmienia kierunku do póki nie będzie więcej osób chcących wsiąść / wysiąść w obecnym kierunku.
 4. Kiedy jest pusta, winda stara się być mądra, więc:
+
 4.1 Jeżeli jadąc do góry opróżni się, może pojechać wyżej, by zgarnąć osobę z najwyższego piętra.
+
 4.2 Analogicznie jadąc w dół opróżni się i jest pusta, może pojechać niżej, by zgarnąć osobę z najniższego piętra.
+
 5. Winda ma maksymalną pojemność osób podawaną przez użytkownika.
 6. Zawołana winda zatrzyma się na piętrze nawet gdy jest pełna i nikt nie wysiada.
 7. Jeżeli winda jest pusta i nie ma dodatkowych osób do zabrania, wraca ona na parter.
@@ -32,10 +35,15 @@ Piętro na które chcą jechać reprezentuje ich numer.
 
 ### Input
 1. queues - jest listą kolejek ludzi na każdym piętrze budynku.
+
 1.1 Wysokość budynku uwarunkowana ilością list wewnątrz.
+
 1.2 0 jest piętrem przy ziemi.
+
 1.3 Nie na wszystkich piętrach są ludzie.
+
 1.4 Numery oznaczają piętra, na które ludzie chcą się dostać.
+
 2. capacity - maksymalna liczba ludzi, która może wsiąść do windy.
 
 ### Sprawdzanie parametrów
