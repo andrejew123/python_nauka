@@ -21,6 +21,9 @@ Tak więc wynikiem dla Wektora1 oraz 2 będzie 8.
 3. Maksymalna możliwa liczba wektorów: 5
 4. Maksymalna długość pojedynczego wektora: 20
 
+### Dodatkowo
+Napisz proof of concept swojej kombinacji rozwiązania tego zadania.
+
 # Zadanie 2 -- Liczby pierwsze
 Stwórz funkcję zwracającą sumę liczb pierwszych poniżej lub równej argumentowi. n może być na prawdę duże ;-)
 
