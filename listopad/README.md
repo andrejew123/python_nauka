@@ -68,3 +68,12 @@ Masz zaimplementować drzewko używając dict'ów, gdzie:
 >>> funkcja_budujaca_drzewko("true", "trust")
 
 {'t': {'tr': {'tru': {'true': None, 'trus': {'trust': None}}}}}
+
+# Zadanie 5. -- Piwomida.
+Firma w której pracujesz przekazała pracownikom X pieniedzy na zabawę, stwierdziliście, że kupicie za wszystko piwa po cenie Y, z których zbudujecie piwną piramidę.
+
+Dla przykładu, dostaliście od szefa 220 złotych, gdzie jedno piwo kupujecie za 4 złote. W efekcie funkcja powinna wypluć liczbę 5, ponieważ 5 pięter możemy z nich zbudować (licząc od góry każde piętro ma piw: 1,4,9,16,25).
+
+Przemyśl dokładnie założenia jakie powinna spełniać ta funkcja i spraw by była odporna na błędy wywoławcze.
+
+Dodatkowo napisz do tej funkcji generator, który wygeneruje 1000 X i Y, a następnie 1000 razy wywoła tę funkcję. W X ma znajdować się wartość od -100 do 100000000, Y ma być w przedziale -1 do 5.
