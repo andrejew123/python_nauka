@@ -62,38 +62,21 @@ W czwartym przypadku, winda nigdy nie zjeżdża do piwnicy, więc osoba chcąca 
 Lista wszystkich pięter na których winda się zatrzymała.
 
 ## Przykłady wywołania
-queues = ( (),   (),    (5,5,5), (),   (),    (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (),    (1,1),   (),   (),    (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (3,),  (4,),    (),   (5,),  (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (0,),  (),      (),   (2,),  (3,),  () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-## Output wywołań
+```python
+>>> queues = ( (),   (),    (5,5,5), (),   (),    (),    () )
+>>> winda = Lift(queues, 5)
+>>> winda.theLift()
 [0, 2, 5, 0] 
-
+>>> queues = ( (),   (),    (1,1),   (),   (),    (),    () )
+>>> winda = Lift(queues, 5)
+>>> winda.theLift()
 [0, 2, 1, 0]
-
+>>> queues = ( (),   (3,),  (4,),    (),   (5,),  (),    () )
+>>> winda = Lift(queues, 5)
+>>> winda.theLift()
 [0, 1, 2, 3, 4, 5, 0]
-
+>>> queues = ( (),   (0,),  (),      (),   (2,),  (3,),  () )
+>>> winda = Lift(queues, 5)
+>>> winda.theLift()
 [0, 5, 4, 3, 2, 1, 0]
+```
