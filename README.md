@@ -1,99 +1,41 @@
-# Winda
+# Ciągi
+Zaimplementuj funkcje, które będą osobno (w zależności od wywołania) generować do podanego argumentu (n'tego indeksu) następujące ciągi:
 
-Zaprojektujesz windę.
+1. Fibonacciego:
 
-Ludzie czekają w kolejce na różnych piętrach, czekając na windę.
+Wzór:	F(n) = F(n-1) + F(n-2) gdzie F(0) = 0, F(1) = 1.
 
-Niektórzy ludzie chcą jechać w góre, niektórzy w dół.
+Przykład ciągu: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155
 
-Piętro na które chcą jechać reprezentuje ich numer.
+2. Padovana:
 
-# Zasady
-### Zasady windy
-1. Winda kieruje się tylko w górę i dół.
-2. Każde piętro ma dwa guziki - w góre i w dół (oprócz ostatniego i pierwszego piętra)
-3. Winda nigdy nie zmienia kierunku do póki nie będzie więcej osób chcących wsiąść / wysiąść w obecnym kierunku.
-4. Kiedy jest pusta, winda stara się być mądra, więc:
+Wzór:	a(n) = a(n-2) + a(n-3) gdzie a(0)=1, a(1)=a(2)=0.
 
-a) Jeżeli jadąc do góry opróżni się, może pojechać wyżej, by zgarnąć osobę z najwyższego piętra.
+Przykład ciągu: 1, 0, 0, 1, 0, 1, 1, 1, 2, 2, 3, 4, 5, 7, 9, 12, 16, 21, 28, 37, 49, 65, 86, 114, 151, 200, 265, 351, 465, 616, 816, 1081, 1432, 1897, 2513, 3329, 4410, 5842, 7739, 10252, 13581, 17991, 23833, 31572, 41824, 55405, 73396, 97229, 128801, 170625
 
-b) Analogicznie jadąc w dół opróżni się i jest pusta, może pojechać niżej, by zgarnąć osobę z najniższego piętra.
+3. Jacobsthala:
 
-5. Winda ma maksymalną pojemność osób podawaną przez użytkownika.
-6. Zawołana winda zatrzyma się na piętrze nawet gdy jest pełna i nikt nie wysiada.
-7. Jeżeli winda jest pusta i nie ma dodatkowych osób do zabrania, wraca ona na parter.
+Wzór:	a(n) = a(n-1) + 2*a(n-2), gdzie a(0) = 0, a(1) = 1.
 
-### Zasady ludzi
-1. Ludzie stoją w ,,kolejce" do windy, która kolejno reprezentuje wejście do windy.
-2. Wszyscy ludzie mogą jechać w górę i w dół.
-3. Tylko ludzie jadący w tym samym kierunku mogą wsiąść do windy.
-4. Jeżeli osoba nie może wsiąść do windy bo jest pełna, ponownie naciska guzik w górę lub w dół.
+Przykład ciągu: 0, 1, 1, 3, 5, 11, 21, 43, 85, 171, 341, 683, 1365, 2731, 5461, 10923, 21845, 43691, 87381, 174763, 349525, 699051, 1398101, 2796203, 5592405, 11184811, 22369621, 44739243, 89478485, 178956971, 357913941, 715827883, 1431655765, 2863311531, 5726623061
 
-### Zadanie
-1. Zabierz wszystkich ludzi na piętra, na których chcą się znaleźć kierując się wyżej wymienionymi zasadami.
-2. Zwróć listę wszystkich pięter na których winda się zatrzymała.
+4. Pella:
 
-### Input
-1. queues - jest listą kolejek ludzi na każdym piętrze budynku.
+Wzór:	a(0) = 0, a(1) = 1; Dla n > 1, a(n) = 2*a(n-1) + a(n-2).
 
-a) Wysokość budynku uwarunkowana ilością list wewnątrz.
+Przykład ciągu: 0, 1, 2, 5, 12, 29, 70, 169, 408, 985, 2378, 5741, 13860, 33461, 80782, 195025, 470832, 1136689, 2744210, 6625109, 15994428, 38613965, 93222358, 225058681, 543339720, 1311738121, 3166815962, 7645370045, 18457556052, 44560482149, 107578520350, 259717522849
 
-b) 0 jest piętrem przy ziemi.
+5. Tribonacciego:
 
-c) Nie na wszystkich piętrach są ludzie.
+Wzór:	a(n) = a(n-1) + a(n-2) + a(n-3) gdzie a(0)=a(1)=0, a(2)=1. 
 
-d) Numery oznaczają piętra, na które ludzie chcą się dostać.
+Przykład ciągu: 0, 0, 1, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274, 504, 927, 1705, 3136, 5768, 10609, 19513, 35890, 66012, 121415, 223317, 410744, 755476, 1389537, 2555757, 4700770, 8646064, 15902591, 29249425, 53798080, 98950096, 181997601, 334745777, 615693474, 1132436852
 
-2. capacity - maksymalna liczba ludzi, która może wsiąść do windy.
+6. Tetrabonacciego:
 
-### Sprawdzanie parametrów
-1. Ludzie chcą dostać się na piętro, które nie istnieje.
-2. Ludzie chcą dostać się na piętro, na którym obecnie się znajdują.
-3. Budynek ma mniej niż 2 piętra.
-4. Piwnice
+Wzór:	a(n) = a(n-1) + a(n-2) + a(n-3) + a(n-4) gdzie a(0)=a(1)=a(2)=0, a(3)=1.
 
-W pierwszych dwóch wypadkach, taka osoba nie wsiada do windy, pozostaje na swoim piętrze a winda go omija.
+Przykład ciągu: 0, 0, 0, 1, 1, 2, 4, 8, 15, 29, 56, 108, 208, 401, 773, 1490, 2872, 5536, 10671, 20569, 39648, 76424, 147312, 283953, 547337, 1055026, 2033628, 3919944, 7555935, 14564533, 28074040, 54114452, 104308960, 201061985, 387559437, 747044834, 1439975216, 2775641472
 
-W trzecim wypadku, zwracany jest wynik False, ponieważ winda nie ma tutaj racji bytu.
-
-W czwartym przypadku, winda nigdy nie zjeżdża do piwnicy, więc osoba chcąca tam zjechać ląduje na parterze, skąd musi zejść schodami.
-
-### Output
-Lista wszystkich pięter na których winda się zatrzymała.
-
-## Przykłady wywołania
-queues = ( (),   (),    (5,5,5), (),   (),    (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (),    (1,1),   (),   (),    (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (3,),  (4,),    (),   (5,),  (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (0,),  (),      (),   (2,),  (3,),  () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-## Output wywołań
-[0, 2, 5, 0] 
-
-[0, 2, 1, 0]
-
-[0, 1, 2, 3, 4, 5, 0]
-
-[0, 5, 4, 3, 2, 1, 0]
+### Założenia
+Wartość n znajdować będzie się w przedziale od -1 do 50. W wypadku -1 ma zwrócić False, podobnie jak dla 0.
