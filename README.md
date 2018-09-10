@@ -1,7 +1,11 @@
 # python_nauka
 
-Repozytorium zawiera zadania, które powinny zostać zrobione do końca miesiąca nazwy folderu.
+Repozytorium to składa się z wielu branchy, każdy branch to oddzielne zadania na wyznaczony miesiąc. Już na starcie masz się czegoś nauczyć albowiem obsługi githuba.
 
-Stwórz własne repozytorium, które zawierać będzie wszystko to, co ja mam wrzucone. Możesz zaforkować moje repo i wprowadzać na nie zmiany do własnego repo, na którym ja będę śledził Twoje postępy.
+Stwórz swoje konto na githubie i zaciągnij wszystkie stąd branche. To jak zorganizujesz własną prace, zależy od Ciebie. Twoje repo ma posiadać całą zawartość mojego, plus do tego rozwiązania zadań (czyli zadanie + rozwiązanie). 
+
+#Nie scalaj branchy!!
+
+Do ostatniego dnia każdego miesiąca (nazwy brancha) masz czas na zrobienie określonych w tym branchu zadań.
 
 Powodzenia ;-)
