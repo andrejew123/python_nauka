@@ -117,3 +117,22 @@ False
 “#HashtagBysMialaCoRobić”
 False
 ```
+
+# Zadanie 6.
+Piramida jedynek.
+
+Masz stworzyć jak najkrócej napisany generator piramidy jedynek do n'tego poziomu. Czyli:
+```python
+>>> piramida(0)
+[[]]
+>>> piramida(1)
+[[], [1]]
+>>> piramida(2)
+[[], [1], [1,1]]
+>>> piramida(3)
+[[], [1], [1,1], [1,1,1]]
+>>> piramida(4)
+[[], [1], [1,1], [1,1,1], [1,1,1,1]]
+```
+
+Wygeneruj 1000 liczb od -10 do 100 i zobacz czy się wysypie
