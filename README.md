@@ -1,99 +1,79 @@
-# Winda
+# Zadanie 1 -- Dziwna permutacja.
+Na wstępie otrzymujesz wektory, których długość jest od 3 do 20, wektorów może być kilka, tak więc Twoja funkcja powinna przyjmować *args.
 
-Zaprojektujesz windę.
+Z tych wektorów masz zwrócić inta, który będzie oznaczał ile jest możliwych na nich permutacji, z tym że...
 
-Ludzie czekają w kolejce na różnych piętrach, czekając na windę.
+Permutacja ma być niepełna czyli. Otrzymujesz 2 wektory:
 
-Niektórzy ludzie chcą jechać w góre, niektórzy w dół.
+Wektor1 = (1,2,3)
 
-Piętro na które chcą jechać reprezentuje ich numer.
+Wektor2 = (11,12,13)
 
-# Zasady
-### Zasady windy
-1. Winda kieruje się tylko w górę i dół.
-2. Każde piętro ma dwa guziki - w góre i w dół (oprócz ostatniego i pierwszego piętra)
-3. Winda nigdy nie zmienia kierunku do póki nie będzie więcej osób chcących wsiąść / wysiąść w obecnym kierunku.
-4. Kiedy jest pusta, winda stara się być mądra, więc:
+Permutacje zgodne to:
 
-a) Jeżeli jadąc do góry opróżni się, może pojechać wyżej, by zgarnąć osobę z najwyższego piętra.
+[(1,2,3,11,12,13), (1,2,11,12,3,13), (1,11,2,3,12,13), (1,11,2,12,3,13), (11,12,13,1,2,3), (11,12,1,2,13,3), (11,1,12,13,2,3), (11,1,12,2,13,3)]
 
-b) Analogicznie jadąc w dół opróżni się i jest pusta, może pojechać niżej, by zgarnąć osobę z najniższego piętra.
+Tak więc wynikiem dla Wektora1 oraz 2 będzie 8.
 
-5. Winda ma maksymalną pojemność osób podawaną przez użytkownika.
-6. Zawołana winda zatrzyma się na piętrze nawet gdy jest pełna i nikt nie wysiada.
-7. Jeżeli winda jest pusta i nie ma dodatkowych osób do zabrania, wraca ona na parter.
+### Założenia
+1. Wartości z nie mogą się przeplatać tzn. nie może być np: (3,2,11,13,12,1), musi zostać zachowany ciąg liczb z wektorów, który niekoniecznie ułożony jest od najmniejszego do największego.
+2. Mają występować ciągi n-elementowe np. (1,2,11,12...) Gdzie jak widzisz występuje 1 oraz 2 ale tuż po nich z tej samej pozycji dodawane są wartości z wektora2.
+3. Maksymalna możliwa liczba wektorów: 5
+4. Maksymalna długość pojedynczego wektora: 20
 
-### Zasady ludzi
-1. Ludzie stoją w ,,kolejce" do windy, która kolejno reprezentuje wejście do windy.
-2. Wszyscy ludzie mogą jechać w górę i w dół.
-3. Tylko ludzie jadący w tym samym kierunku mogą wsiąść do windy.
-4. Jeżeli osoba nie może wsiąść do windy bo jest pełna, ponownie naciska guzik w górę lub w dół.
+### Dodatkowo
+Napisz proof of concept swojej kombinacji rozwiązania tego zadania.
 
-### Zadanie
-1. Zabierz wszystkich ludzi na piętra, na których chcą się znaleźć kierując się wyżej wymienionymi zasadami.
-2. Zwróć listę wszystkich pięter na których winda się zatrzymała.
+# Zadanie 2 -- Liczby pierwsze
+Stwórz funkcję zwracającą sumę liczb pierwszych poniżej lub równej argumentowi. n może być na prawdę duże ;-)
 
-### Input
-1. queues - jest listą kolejek ludzi na każdym piętrze budynku.
-
-a) Wysokość budynku uwarunkowana ilością list wewnątrz.
-
-b) 0 jest piętrem przy ziemi.
-
-c) Nie na wszystkich piętrach są ludzie.
-
-d) Numery oznaczają piętra, na które ludzie chcą się dostać.
-
-2. capacity - maksymalna liczba ludzi, która może wsiąść do windy.
-
-### Sprawdzanie parametrów
-1. Ludzie chcą dostać się na piętro, które nie istnieje.
-2. Ludzie chcą dostać się na piętro, na którym obecnie się znajdują.
-3. Budynek ma mniej niż 2 piętra.
-4. Piwnice
-
-W pierwszych dwóch wypadkach, taka osoba nie wsiada do windy, pozostaje na swoim piętrze a winda go omija.
-
-W trzecim wypadku, zwracany jest wynik False, ponieważ winda nie ma tutaj racji bytu.
-
-W czwartym przypadku, winda nigdy nie zjeżdża do piwnicy, więc osoba chcąca tam zjechać ląduje na parterze, skąd musi zejść schodami.
-
+### Przykład
+n = 10
+2 + 3 + 5 + 7 = 17
 ### Output
-Lista wszystkich pięter na których winda się zatrzymała.
+17
 
-## Przykłady wywołania
-queues = ( (),   (),    (5,5,5), (),   (),    (),    () )
+# Zadanie 3 -- Kalkulator po literkach
+Stwórz klasę, która będzie obsługiwać kalkulator literkowy.
 
-winda = Lift(queues, 5)
+d - dodaj 1 (na starcie jest 0)
 
-winda.theLift()
+o - odejmij 1
 
-------------
-queues = ( (),   (),    (1,1),   (),   (),    (),    () )
+p - weź do kwadratu
 
-winda = Lift(queues, 5)
+w - wypluj (dodaj do listy obecna wartość)
 
-winda.theLift()
+* niepoprawne wartości powinny zostać zignorowane
 
-------------
-queues = ( (),   (3,),  (4,),    (),   (5,),  (),    () )
+### Przykład
+jakasklasa.funkcjawewnatrz("dddpowpw") ==> [8, 64]
 
-winda = Lift(queues, 5)
+parse("iiisdoso")  ==>  [8, 64]
 
-winda.theLift()
+# Zadanie 4. -- Zbuduj drzewko
+Masz zaimplementować drzewko używając dict'ów, gdzie:
+1. Klucze są prefixami
+2. Wartość wynosi None lub kontynuacja drzewka
 
-------------
-queues = ( (),   (0,),  (),      (),   (2,),  (3,),  () )
+### Przykład
+>>> funkcja_budujaca_drzewko("trie")
 
-winda = Lift(queues, 5)
+{'t': {'tr': {'tri': {'trie': None}}}}
 
-winda.theLift()
+>>> funkcja_budujaca_drzewko("A","to", "tea", "ted", "ten", "i", "in", "inn")
 
-## Output wywołań
-[0, 2, 5, 0] 
+{'A': None, 't': {'to': None, 'te': {'tea': None, 'ted': None, 'ten': None}}, 'i': {'in': {'inn': None}}}
 
-[0, 2, 1, 0]
+>>> funkcja_budujaca_drzewko("true", "trust")
 
-[0, 1, 2, 3, 4, 5, 0]
+{'t': {'tr': {'tru': {'true': None, 'trus': {'trust': None}}}}}
 
-[0, 5, 4, 3, 2, 1, 0]
+# Zadanie 5. -- Piwomida.
+Firma w której pracujesz przekazała pracownikom X pieniedzy na zabawę, stwierdziliście, że kupicie za wszystko piwa po cenie Y, z których zbudujecie piwną piramidę.
+
+Dla przykładu, dostaliście od szefa 220 złotych, gdzie jedno piwo kupujecie za 4 złote. W efekcie funkcja powinna wypluć liczbę 5, ponieważ 5 pięter możemy z nich zbudować (licząc od góry każde piętro ma piw: 1,4,9,16,25).
+
+Przemyśl dokładnie założenia jakie powinna spełniać ta funkcja i spraw by była odporna na błędy wywoławcze.
+
+Dodatkowo napisz do tej funkcji generator, który wygeneruje 1000 X i Y, a następnie 1000 razy wywoła tę funkcję. W X ma znajdować się wartość od -100 do 100000000, Y ma być w przedziale -1 do 5.
