@@ -21,7 +21,7 @@ będzie dwukrotnie starszy)
 # Zadanie 2.
 Funkcja przyjmuje jeden argument:
 
-1. String będący sentencją
+1. String
 
 Twoim zadaniem jest usunąć wszystkie duplikaty ze stringa pozostawiając pierwsze
 pojawienie się tego wyrazu.
