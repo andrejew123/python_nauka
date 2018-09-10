@@ -1,99 +1,95 @@
-# Winda
+# Ogólne założenia.
+Już na tym etapie będziemy sprawdzać szybkość wykonywania Waszych skryptów. Postarajcie się tworzyć je tak, by działały jak najszybciej.
+Aby sprawdzić jak Wasz skrypt działa, odpalacie jedynie skrypt timer.py, a on sprawdzi resztę.
+Wersja pythona >= 3.6.5
 
-Zaprojektujesz windę.
+## Pamiętaj!!!
+Edytujesz pliki zadanie1.py, zadanie2.py itd. możesz dorabiać różne do tego funkcje, ale nie zmieniaj nazwy obecnie istniejącej. To ma być Twoja funkcja budująca, na podstawie której będziesz w returnie zwracać rezultat.
 
-Ludzie czekają w kolejce na różnych piętrach, czekając na windę.
 
-Niektórzy ludzie chcą jechać w góre, niektórzy w dół.
+# Zadanie 1.
+Funkcja przyjmuje dwa argumenty:
 
-Piętro na które chcą jechać reprezentuje ich numer.
+1. Obecny wiek ojca (lata)
+2. Obecny wiek syna (lata)
 
-# Zasady
-### Zasady windy
-1. Winda kieruje się tylko w górę i dół.
-2. Każde piętro ma dwa guziki - w góre i w dół (oprócz ostatniego i pierwszego piętra)
-3. Winda nigdy nie zmienia kierunku do póki nie będzie więcej osób chcących wsiąść / wysiąść w obecnym kierunku.
-4. Kiedy jest pusta, winda stara się być mądra, więc:
+Niech obliczy, ile lat temu ojciec miał dwa razy tyle lat ile syn w chwili obecnej (albo, za ile lat
+będzie dwukrotnie starszy)
 
-a) Jeżeli jadąc do góry opróżni się, może pojechać wyżej, by zgarnąć osobę z najwyższego piętra.
+# Zadanie 2.
+Funkcja przyjmuje jeden argument:
 
-b) Analogicznie jadąc w dół opróżni się i jest pusta, może pojechać niżej, by zgarnąć osobę z najniższego piętra.
+1. String będący sentencją
 
-5. Winda ma maksymalną pojemność osób podawaną przez użytkownika.
-6. Zawołana winda zatrzyma się na piętrze nawet gdy jest pełna i nikt nie wysiada.
-7. Jeżeli winda jest pusta i nie ma dodatkowych osób do zabrania, wraca ona na parter.
+Twoim zadaniem jest usunąć wszystkie duplikaty ze stringa pozostawiając pierwsze
+pojawienie się tego wyrazu.
 
-### Zasady ludzi
-1. Ludzie stoją w ,,kolejce" do windy, która kolejno reprezentuje wejście do windy.
-2. Wszyscy ludzie mogą jechać w górę i w dół.
-3. Tylko ludzie jadący w tym samym kierunku mogą wsiąść do windy.
-4. Jeżeli osoba nie może wsiąść do windy bo jest pełna, ponownie naciska guzik w górę lub w dół.
+### Input:
+string = ‘alpha beta beta gamma gamma gamma delta gamma delta beta alpha gamma’
+### Output:
+‘alpha beta gamma delta’
 
-### Zadanie
-1. Zabierz wszystkich ludzi na piętra, na których chcą się znaleźć kierując się wyżej wymienionymi zasadami.
-2. Zwróć listę wszystkich pięter na których winda się zatrzymała.
+# Zadanie 3.
+Funkcja przyjmuje jeden argument:
 
-### Input
-1. queues - jest listą kolejek ludzi na każdym piętrze budynku.
+1. n będący liczbą o nieokreślonej wielkości
 
-a) Wysokość budynku uwarunkowana ilością list wewnątrz.
+Twoim zadaniem jest stworzenie funkcji generującej trójkąt Pascala do n’tego poziomu.
+### Input:
+n = 4
+### Output:
+[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
 
-b) 0 jest piętrem przy ziemi.
+# Zadanie 4.
+Funkcja przyjmuje jeden argument:
 
-c) Nie na wszystkich piętrach są ludzie.
+1. n będący liczbą o nieokreślonej wielkości. (liczba krzeseł)
 
-d) Numery oznaczają piętra, na które ludzie chcą się dostać.
+W poczekalni jest n liczba krzeseł w rzędzie. Krzesła są ponumerowane od 1 do n. Gdzie 1
+jest najbliżej wejścia (które równocześnie jest wyjściem).
 
-2. capacity - maksymalna liczba ludzi, która może wsiąść do windy.
+Z jakiegoś powodu, ludzie kierują się wyborem krzeseł w poniższy sposób:
+1. Znaleźć miejsce jak najdalej od innej osoby jak to możliwe.
+2. Znaleźć miejsce jak najbliżej wyjścia.
 
-### Sprawdzanie parametrów
-1. Ludzie chcą dostać się na piętro, które nie istnieje.
-2. Ludzie chcą dostać się na piętro, na którym obecnie się znajdują.
-3. Budynek ma mniej niż 2 piętra.
-4. Piwnice
+Dla 10 krzeseł i pacjentów wygląda to następująco.
 
-W pierwszych dwóch wypadkach, taka osoba nie wsiada do windy, pozostaje na swoim piętrze a winda go omija.
+Krzesło 1 2 3 4 5 6 7 8 9 10
 
-W trzecim wypadku, zwracany jest wynik False, ponieważ winda nie ma tutaj racji bytu.
+Pacjent 1 7 5 8 3 9 4 6 10 2
 
-W czwartym przypadku, winda nigdy nie zjeżdża do piwnicy, więc osoba chcąca tam zjechać ląduje na parterze, skąd musi zejść schodami.
+Twoim zadaniem jest znalezienie ostatniego krzesła zajętego przez pacjenta jako int.
 
+# Zadanie 5.
+Funkcja przyjmuje jeden argument:
+1. string będący sentencją lub lista stringów zawierających sentencje.
+
+Firma marketingowa spędza mnóstwo czasu na tworzeniu hashtagów, pomóż im stworzyć
+Hashtag generator!
+
+Masz założenia:
+1. output musi zaczynać się od (#)
+2. Wszystkie wyrazy muszą zaczynać się z dużej litery!
+3. Jeżeli finalny rezultat ma więcej niż 140 znaków powinno zwrócić False
+4. Jeżeli input jest pusty musi zwrócić False
+5. Jeżeli argument jest listą, ma zwrócić rezultat w postaci stringa, który zostanie
+wyprintowany.
+### Input:
+“Siema budujemy hashtag generator”
 ### Output
-Lista wszystkich pięter na których winda się zatrzymała.
-
-## Przykłady wywołania
-queues = ( (),   (),    (5,5,5), (),   (),    (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (),    (1,1),   (),   (),    (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (3,),  (4,),    (),   (5,),  (),    () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-------------
-queues = ( (),   (0,),  (),      (),   (2,),  (3,),  () )
-
-winda = Lift(queues, 5)
-
-winda.theLift()
-
-## Output wywołań
-[0, 2, 5, 0] 
-
-[0, 2, 1, 0]
-
-[0, 1, 2, 3, 4, 5, 0]
-
-[0, 5, 4, 3, 2, 1, 0]
+“#SiemaBudujemyHashtagGenerator”
+### Input
+“No i       bedzie           fajny”
+### Output
+“#NoIBedzieFajny”
+### Input
+“"
+### Output
+False
+### Input
+[“Taki tam”, “Kolejny bedzie”, “hashtag bys miala co robić”, “”]
+### Output
+“#TakiTam”
+“#KolejnyBedzie”
+“#HashtagBysMialaCoRobić”
+False
