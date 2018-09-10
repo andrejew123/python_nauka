@@ -4,15 +4,14 @@ Na wstępie otrzymujesz wektory, których długość jest od 3 do 20, wektorów 
 Z tych wektorów masz zwrócić inta, który będzie oznaczał ile jest możliwych na nich permutacji, z tym że...
 
 Permutacja ma być niepełna czyli. Otrzymujesz 2 wektory:
-
+```python
 Wektor1 = (1,2,3)
-
 Wektor2 = (11,12,13)
-
+```
 Permutacje zgodne to:
-
+```python
 [(1,2,3,11,12,13), (1,2,11,12,3,13), (1,11,2,3,12,13), (1,11,2,12,3,13), (11,12,13,1,2,3), (11,12,1,2,13,3), (11,1,12,13,2,3), (11,1,12,2,13,3)]
-
+```
 Tak więc wynikiem dla Wektora1 oraz 2 będzie 8.
 
 ### Założenia
@@ -28,11 +27,14 @@ Napisz proof of concept swojej kombinacji rozwiązania tego zadania.
 Stwórz funkcję zwracającą sumę liczb pierwszych poniżej lub równej argumentowi. n może być na prawdę duże ;-)
 
 ### Przykład
+```python
 n = 10
 2 + 3 + 5 + 7 = 17
+```
 ### Output
+```python
 17
-
+```
 # Zadanie 3 -- Kalkulator po literkach
 Stwórz klasę, która będzie obsługiwać kalkulator literkowy.
 
@@ -47,28 +49,23 @@ w - wypluj (dodaj do listy obecna wartość)
 * niepoprawne wartości powinny zostać zignorowane
 
 ### Przykład
+```python
 jakasklasa.funkcjawewnatrz("dddpowpw") ==> [8, 64]
-
-parse("iiisdoso")  ==>  [8, 64]
-
+```
 # Zadanie 4. -- Zbuduj drzewko
 Masz zaimplementować drzewko używając dict'ów, gdzie:
 1. Klucze są prefixami
 2. Wartość wynosi None lub kontynuacja drzewka
 
 ### Przykład
+```python
 >>> funkcja_budujaca_drzewko("trie")
-
 {'t': {'tr': {'tri': {'trie': None}}}}
-
 >>> funkcja_budujaca_drzewko("A","to", "tea", "ted", "ten", "i", "in", "inn")
-
 {'A': None, 't': {'to': None, 'te': {'tea': None, 'ted': None, 'ten': None}}, 'i': {'in': {'inn': None}}}
-
 >>> funkcja_budujaca_drzewko("true", "trust")
-
 {'t': {'tr': {'tru': {'true': None, 'trus': {'trust': None}}}}}
-
+```
 # Zadanie 5. -- Piwomida.
 Firma w której pracujesz przekazała pracownikom X pieniedzy na zabawę, stwierdziliście, że kupicie za wszystko piwa po cenie Y, z których zbudujecie piwną piramidę.
 
