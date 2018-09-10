@@ -1,6 +1,8 @@
 # Ogólne założenia.
 Już na tym etapie będziemy sprawdzać szybkość wykonywania Waszych skryptów. Postarajcie się tworzyć je tak, by działały jak najszybciej.
+
 Aby sprawdzić jak Wasz skrypt działa, odpalacie jedynie skrypt timer.py, a on sprawdzi resztę.
+
 Wersja pythona >= 3.6.5
 
 ## Pamiętaj!!!
@@ -25,10 +27,13 @@ Twoim zadaniem jest usunąć wszystkie duplikaty ze stringa pozostawiając pierw
 pojawienie się tego wyrazu.
 
 ### Input:
+```python
 string = ‘alpha beta beta gamma gamma gamma delta gamma delta beta alpha gamma’
+```
 ### Output:
+```python
 ‘alpha beta gamma delta’
-
+```
 # Zadanie 3.
 Funkcja przyjmuje jeden argument:
 
@@ -36,10 +41,13 @@ Funkcja przyjmuje jeden argument:
 
 Twoim zadaniem jest stworzenie funkcji generującej trójkąt Pascala do n’tego poziomu.
 ### Input:
+```python
 n = 4
+```
 ### Output:
+```python
 [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
-
+```
 # Zadanie 4.
 Funkcja przyjmuje jeden argument:
 
@@ -75,21 +83,37 @@ Masz założenia:
 5. Jeżeli argument jest listą, ma zwrócić rezultat w postaci stringa, który zostanie
 wyprintowany.
 ### Input:
+```python
 “Siema budujemy hashtag generator”
+```
 ### Output
+```python
 “#SiemaBudujemyHashtagGenerator”
+```
 ### Input
+```python
 “No i       bedzie           fajny”
+```
 ### Output
+```python
 “#NoIBedzieFajny”
+```
 ### Input
+```python
 “"
+```
 ### Output
+```python
 False
+```
 ### Input
+```python
 [“Taki tam”, “Kolejny bedzie”, “hashtag bys miala co robić”, “”]
+```
 ### Output
+```python
 “#TakiTam”
 “#KolejnyBedzie”
 “#HashtagBysMialaCoRobić”
 False
+```
