@@ -74,3 +74,50 @@ Dla przykładu, dostaliście od szefa 220 złotych, gdzie jedno piwo kupujecie z
 Przemyśl dokładnie założenia jakie powinna spełniać ta funkcja i spraw by była odporna na błędy wywoławcze.
 
 Dodatkowo napisz do tej funkcji generator, który wygeneruje 1000 X i Y, a następnie 1000 razy wywoła tę funkcję. W X ma znajdować się wartość od -100 do 100000000, Y ma być w przedziale -1 do 5.
+
+# Zadanie 6. -- Trójkąt.
+
+Budujesz n-piętrowy trójkąt. np. 5 pięter wygląda tak:
+
+----------
+
+            1
+
+          2 4 2
+
+        3 6 9 6 3
+
+      4 8 12 16 12 8 4
+
+    5 10 15 20 25 20 15 10 5
+
+----------
+
+Chodzi o to, ze dane n pietro dodaje do siebie n az uzyska n^2, a nastepnie zmniejsza sie o n az uzyska ponownie wartosc rowna danemu piętru.
+
+Twoim zadaniem będzie obliczenie dla n'tego piętra trzech rzeczy:
+
+1. Całkowita suma
+
+2. Suma liczb parzystych
+
+3. Suma liczb nieparzystych
+
+Które zawarte będą w Twojej wynikowej liscie, gdzie [Calkowita suma, Suma liczb parzystych, Suma liczb nieparzystych].
+
+### Przyklad
+```python
+>>> multiplies(1)
+
+[1, 0, 1]
+
+>>> multiplies(2)
+
+[9, 8, 1]
+
+>>> multiplies(3)
+
+[36, 20, 16]
+```
+Pamietaj! chcialbym aby to zadanie bylo rozwalone matematycznie, wiec postaraj sie znalezc jakies logiczne rozwiazanie. Dla n = 10000000 ma się wykonywać poniżej 10 sekund. Zaś dla 1000000 poniżej sekundy.
+
